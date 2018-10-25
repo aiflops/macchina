@@ -26,6 +26,7 @@ class Connection(threading.Thread):
         count = 0
         data = None
 
+
         while 1:
             if data == None:
                 self.client_socket.sendto(message, addr)
