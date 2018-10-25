@@ -16,9 +16,11 @@ class Connection(threading.Thread):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.client_socket.settimeout(1.0)
 
+
     def run(self):
         message = b'0_0'
         addr = ("192.168.0.100", 12016)
+
 
         self.client_socket.sendto(message, addr)
         count = 0
